@@ -20,7 +20,7 @@ def arm(x, y, steps, length=1.0):
 
 def cyferblat():
     year, month, day, hours, minutes, seconds, weekday, yearday, isdst = time.localtime()
-    arm1 = (hours % 12) + int(minutes/12)
+    arm1 = ((hours % 12) * 5) + int(minutes/12)
     arm2 = minutes
     arm3 = seconds
     angle = 0.0
