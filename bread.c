@@ -7,6 +7,13 @@
 #include <unistd.h>
 #include <ao/ao.h>
 
+static ao_device *device;
+
+void device_cleanup(void) {
+    ao_close(device);
+    ao_shutdown();
+}
+
 int main(int argc, char *argv[], char *envp[])
 {
     ao_initialize();
@@ -21,13 +28,8 @@ int main(int argc, char *argv[], char *envp[])
         AO_FMT_NATIVE,
         NULL
     };
-    static ao_device *device;
     device = ao_open_live(driver_id, &sample_format, NULL);
-    void cleanup(void) {
-        ao_close(device);
-        ao_shutdown();
-    }
-    atexit(cleanup);
+    atexit(device_cleanup);
 
     while (1) {
         char buf[2048];
