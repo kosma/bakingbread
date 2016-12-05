@@ -1,0 +1,9 @@
+dependencies:
+  post:
+    - apt-get install -y libao-dev
+
+test:
+  override:
+    - make
+
+# vim: ts=2 sw=2 et sr
