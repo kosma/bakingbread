@@ -23,9 +23,9 @@ If you have ``libao``, compile with ``make`` and run with:
 If you don't, substitute any other player capable of reading raw audio in
 unsigned, 8-bit, stereo, 44100Hz sample rate mode. Linux example:
 
-``./baking.py | ./aplay -f U8 -c 2 -r 44100``
+``./baking.py | aplay -f U8 -c 2 -r 44100``
 
-which works just as well but isn't as hip.
+which works exactly the same but isn't as hip.
 
 Why?
 ----
