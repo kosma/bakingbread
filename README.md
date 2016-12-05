@@ -1,6 +1,8 @@
 [Ba]king [Br]ead
 ==================
 
+[![CircleCI](https://circleci.com/gh/kosma/bakingbread.svg?style=svg)](https://circleci.com/gh/kosma/bakingbread)
+
 Sound cards have been used as oscilloscopes for a really long time. Why not
 connect them in reverse? If the input can work, the output should too. Let's
 draw pretty pictures! Or, more accurately, ugly clocks.
