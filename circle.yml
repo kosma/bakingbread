@@ -1,6 +1,6 @@
 dependencies:
   post:
-    - apt-get install -y libao-dev
+    - sudo apt-get install -y libao-dev
 
 test:
   override:
